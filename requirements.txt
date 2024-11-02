@@ -1,0 +1,13 @@
+pydantic
+sqlalchemy
+python-dotenv
+fastapi
+uvicorn
+jinja2
+starlette
+pymysql
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart
+itsdangerous
+bcrypt==4.0.1

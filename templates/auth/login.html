@@ -1,0 +1,60 @@
+{% extends "auth/base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <div class="login-card">
+        <h2>Login</h2>
+        <p class="subtitle">Welcome back! Please enter your details.</p>
+
+        {% if error %}
+            <div class="error-message">
+                {{ error }}
+            </div>
+        {% endif %}
+
+        {% if success %}
+            <div class="success-message">
+                {{ success }}
+            </div>
+        {% endif %}
+
+        <form method="POST">
+            <div class="form-group">
+                <input type="text" 
+                       class="form-control" 
+                       placeholder="Username or Email"
+                       name="username_or_email" 
+                       value="{{ username_or_email or '' }}"
+                       required>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" 
+                       class="form-control" 
+                       placeholder="Password"
+                       name="password" 
+                       required>
+            </div>
+
+            <div class="form-options">
+                <a href="#" class="forgot-link">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="login-btn">Sign in</button>
+        </form>
+
+        <div class="signup-link">
+            <p>Don't have an account? <a href="/auth/signup">Sign up</a></p>
+        </div>
+    </div>
+
+    <div class="decorative-elements">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="triangle triangle-1"></div>
+        <div class="triangle triangle-2"></div>
+    </div>
+</div>
+{% endblock %} 

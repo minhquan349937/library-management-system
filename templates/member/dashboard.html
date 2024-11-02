@@ -1,0 +1,60 @@
+{% extends 'member/base.html' %}
+{% block content %}
+<div class="grid grid-cols-4 gap-6 xl:grid-cols-1">
+    <div class="report-card">
+        <div class="card">
+            <div class="card-body flex flex-col">
+                <!-- top -->
+                <div class="flex flex-row justify-between items-center">
+                    <div class="h6 text-red-700 fad fa-book"></div>
+                </div>
+                <!-- end top -->
+                <!-- bottom -->
+                <div class="mt-8">
+                    <h1 class="h5 num-4">{{ stats.total_borrowed }}</h1>
+                    <p>Borrowed Books</p>
+                </div>
+                <!-- end bottom -->
+            </div>
+        </div>
+        <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+    </div>
+
+
+    <div class="report-card">
+        <div class="card">
+            <div class="card-body flex flex-col">
+                <!-- top -->
+                <div class="flex flex-row justify-between items-center">
+                    <div class="h6 text-yellow-600 fad fa-book"></div>
+                </div>
+                <!-- end top -->
+                <!-- bottom -->
+                <div class="mt-8">
+                    <h1 class="h5 num-4">{{ stats.total_favorites }}</h1>
+                    <p>Total Books Favorites</p>
+                </div>
+                <!-- end bottom -->
+            </div>
+        </div>
+        <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+    </div>
+    <div class="report-card">
+      <div class="card">
+          <div class="card-body flex flex-col">
+              <!-- top -->
+              <div class="flex flex-row justify-between items-center">
+                  <div class="h6 text-yellow-600 fad fa-money-bill-wave"></div>
+              </div>
+              <!-- end top -->
+              <!-- bottom -->
+              <div class="mt-8">
+                  <h1 class="h5 num-4">{{ stats.total_rent_fee }}  ₹</h1>
+                  <p>Rent Fee (Current Month)</p>
+              </div>
+              <!-- end bottom -->
+          </div>
+      </div>
+      <div class="footer bg-white p-1 mx-4 border border-t-0 rounded rounded-t-none"></div>
+</div>
+{% endblock content %}
